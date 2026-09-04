@@ -1,0 +1,15 @@
+{
+  "expo": {
+    "name": "TempConverter",
+    "slug": "dion-tempconverter-rn",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "predictiveBackGestureEnabled": false
+    }
+  }
+}
