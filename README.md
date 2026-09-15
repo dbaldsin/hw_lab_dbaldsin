@@ -23,3 +23,11 @@ npm test
 - `viewModels/`: reactive card selection hook
 - `views/`: command and definition screens
 - `__tests__/`: Jest tests for deck behavior
+
+## Simulator screenshots
+
+Captured in the iPhone 17 Pro Simulator:
+
+![Command card](screenshots/command-card.png)
+
+![Definition card](screenshots/definition-card.png)
