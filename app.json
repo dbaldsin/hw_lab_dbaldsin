@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "RailsCards",
+    "slug": "hw-lab-dionbaldsing",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": { "supportsTablet": true },
+    "android": { "predictiveBackGestureEnabled": false }
+  }
+}
