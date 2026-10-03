@@ -1,0 +1,33 @@
+Actual output excerpt from successful xcodebuild test. Exit code: 0.
+Xcode 26.3 (17C529); iPhone 17 Pro, iOS 26.3 Simulator.
+
+◇ Test run started.
+↳ Testing Library Version: 1501
+↳ Target Platform: arm64-apple-ios13.0-simulator
+◇ Suite RepositoryViewModelTests started.
+◇ Test startsEmpty() started.
+✔ Test startsEmpty() passed after 0.001 seconds.
+◇ Test emptySearchReturnsAllRepos() started.
+✔ Test emptySearchReturnsAllRepos() passed after 0.001 seconds.
+◇ Test searchMatchesSubstring() started.
+✔ Test searchMatchesSubstring() passed after 0.001 seconds.
+◇ Test searchIsCaseInsensitive() started.
+✔ Test searchIsCaseInsensitive() passed after 0.001 seconds.
+◇ Test noMatchReturnsEmpty() started.
+✔ Test noMatchReturnsEmpty() passed after 0.001 seconds.
+◇ Test decodesProvidedJSON() started.
+✔ Test decodesProvidedJSON() passed after 0.351 seconds.
+◇ Test nullDescriptionDecodes() started.
+✔ Test nullDescriptionDecodes() passed after 0.001 seconds.
+✔ Suite RepositoryViewModelTests passed after 0.355 seconds.
+✔ Test run with 7 tests in 1 suite passed after 0.355 seconds.
+2026-10-03 14:41:50.737 xcodebuild[82763:755969] [MT] IDETestOperationsObserverDebug: 17.806 elapsed -- Testing started completed.
+2026-10-03 14:41:50.737 xcodebuild[82763:755969] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-03 14:41:50.737 xcodebuild[82763:755969] [MT] IDETestOperationsObserverDebug: 17.807 sec, +17.806 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/dionbaldsing/Documents/CMU/Fall 26'/mobile_app/lab05/SwiftReposSubmission/DerivedData/Logs/Test/Test-SwiftRepos-2026.10.03_14-41-16-+0300.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

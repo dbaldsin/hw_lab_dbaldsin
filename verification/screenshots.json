@@ -1,0 +1,65 @@
+[
+  {
+    "file": "01-live-api-list.png",
+    "description": "Live GitHub API list; names, descriptions, yellow stars and formatted counts.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "80730f7ab547b7993627ff72ea815ab7ef77bb7cb1b801c8ff273a97ae1b4523"
+  },
+  {
+    "file": "02-uppercase-substring-search.png",
+    "description": "SWIFT query matches mixed-case names by substring.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "00083705d0d42df576277b5bf344f20f058f76cd1261d452ad6e29565f02ab13"
+  },
+  {
+    "file": "03-no-results.png",
+    "description": "Unmatched query shows the native no-results state.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "062c3e7c6f48edd2a75b146a880f0813797eb1bb09945c0d4d5faca5dfecf255"
+  },
+  {
+    "file": "04-alamofire-webview.png",
+    "description": "Live-list selection pushes the real Alamofire GitHub page, with inline title.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "1d0299d104fb47fb84f55b5198bccf100f74318ffe4cf69c9aac8b228f9de8a5"
+  },
+  {
+    "file": "05-back-preserves-search.png",
+    "description": "Back navigation returns to the same Alamofire search result.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "c1d731292410a2571909d7e54409d8502d04dba0c7cb0d9bacb47e0412997398"
+  },
+  {
+    "file": "06-provided-json-list.png",
+    "description": "Provided JSON selected; saved snapshot values are displayed.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "ede044449666628376afb2367bae3bb3c785cf75099f48432579819851ee8e52"
+  },
+  {
+    "file": "07-snapshot-scrolled-rows.png",
+    "description": "Snapshot list scrolled to additional repository rows.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "9b902a76518829d85cd6c3a30544d7d52e95374f8342096f4c5a77723ca86196"
+  },
+  {
+    "file": "08-snapshot-vapor-search.png",
+    "description": "Case-insensitive filtering of the supplied JSON finds vapor.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "c02e48ece0f5a6aa6ef620c2353f296ca012c560efdf544352f6adcb564e7b89"
+  },
+  {
+    "file": "09-vapor-webview.png",
+    "description": "Snapshot selection pushes the real Vapor GitHub page, with inline title.",
+    "width": 1206,
+    "height": 2622,
+    "sha256": "d526093b30555c4a45dbb428ef6724ad298260686145b6d07b923404cf82aade"
+  }
+]
