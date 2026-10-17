@@ -23,3 +23,4 @@ npm test
 The `screenshots/` directory contains captures taken directly from the iPhone 17 Pro Simulator.
 
 - `02-edit-contact.png` - contact editor showing photo selection, name, email, and details sections
+- `03-photo-picker.png` - native iPhone Simulator photo-picker flow

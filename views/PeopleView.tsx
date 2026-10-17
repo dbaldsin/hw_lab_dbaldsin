@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useMemo, useState } from 'react';
-import { Alert, FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -43,20 +43,23 @@ export default function PeopleView() {
 
   if (loading) return <View style={styles.centered}><Text style={styles.muted}>Loading contacts...</Text></View>;
 
-  return <FlatList data={displayedPeople} keyExtractor={(item) => item.id}
-    ListEmptyComponent={<View style={styles.centered}><Ionicons name="people-outline" size={46} color="#9aa0a6" /><Text style={styles.emptyTitle}>No Contacts Yet</Text><Text style={styles.muted}>Tap + to add your first contact.</Text></View>}
-    renderItem={({ item }) => <View style={styles.rowWrap}>
+  if (displayedPeople.length === 0) return <View style={styles.centered}><Ionicons name="people-outline" size={46} color="#9aa0a6" /><Text style={styles.emptyTitle}>No Contacts Yet</Text><Text style={styles.muted}>Tap + to add your first contact.</Text></View>;
+
+  return <View style={styles.list}>
+    {displayedPeople.map((item) => <View key={item.id} style={styles.rowWrap}>
       <Pressable style={styles.row} onPress={() => navigation.navigate('EditPerson', { personId: item.id })}>
         <View style={styles.avatar}><Text style={styles.avatarText}>{(item.name || 'N').trim().charAt(0).toUpperCase()}</Text></View>
         <View style={styles.rowText}><Text style={styles.name}>{item.name || 'New Contact'}</Text>{item.email ? <Text style={styles.email}>{item.email}</Text> : null}</View>
         <Ionicons name="chevron-forward" size={18} color="#9aa0a6" />
       </Pressable>
       <Pressable accessibilityLabel={`Delete ${item.name || 'contact'}`} style={styles.deleteButton} onPress={() => deletePerson(item.id)}><Ionicons name="trash-outline" size={20} color="#ff3b30" /></Pressable>
-    </View>} />;
+    </View>)}
+  </View>;
 }
 
 const styles = StyleSheet.create({
   headerButtons: { flexDirection: 'row', gap: 15, alignItems: 'center' },
+  list: { flex: 1, backgroundColor: '#fff' },
   rowWrap: { flexDirection: 'row', alignItems: 'center', borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: '#d1d1d6', backgroundColor: '#fff' }, row: { flex: 1, flexDirection: 'row', alignItems: 'center', padding: 14, backgroundColor: '#fff' },
   avatar: { width: 42, height: 42, borderRadius: 21, justifyContent: 'center', alignItems: 'center', backgroundColor: '#e8f1ff', marginRight: 12 }, avatarText: { color: '#007AFF', fontWeight: '700', fontSize: 18 },
   rowText: { flex: 1 }, name: { fontSize: 17, color: '#111' }, email: { color: '#6c6c70', fontSize: 13, marginTop: 2 },
