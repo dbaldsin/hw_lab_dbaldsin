@@ -7,7 +7,10 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to your photos so you can add a picture to a contact."
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -16,8 +19,10 @@
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["READ_EXTERNAL_STORAGE"]
     },
+    "plugins": [["expo-image-picker", {"photosPermission": "This app needs access to your photos so you can add a picture to a contact."}]],
     "web": {
       "favicon": "./assets/favicon.png"
     }
