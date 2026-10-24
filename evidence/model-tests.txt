@@ -1,0 +1,9 @@
+
+> arbeitrn@1.0.0 test
+> jest --runInBand
+
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        1.39 s
+Ran all test suites.

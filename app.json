@@ -1,30 +1,21 @@
 {
   "expo": {
-    "name": "SimpleContactsRN",
-    "slug": "SimpleContactsRN",
+    "name": "Arbeit",
+    "slug": "ArbeitRN",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "ios": {
-      "supportsTablet": true,
-      "infoPlist": {
-        "NSPhotoLibraryUsageDescription": "This app needs access to your photos so you can add a picture to a contact."
-      }
+      "supportsTablet": true
     },
     "android": {
-      "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
-      },
-      "predictiveBackGestureEnabled": false,
-      "permissions": ["READ_EXTERNAL_STORAGE"]
+      "package": "edu.cmu.dbaldsin.arbeit"
     },
-    "plugins": [["expo-image-picker", {"photosPermission": "This app needs access to your photos so you can add a picture to a contact."}]],
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "bundler": "metro"
+    },
+    "plugins": [
+      "@react-native-community/datetimepicker"
+    ]
   }
 }

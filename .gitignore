@@ -39,3 +39,8 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# Firebase local runtime
+.env
+*-debug.log
+.firebase/
