@@ -1,6 +1,6 @@
 Starting Metro Bundler
 
-Web Bundled 532ms index.ts (351 modules)
+Web Bundled 423ms index.ts (357 modules)
 
 › Assets (12):
 node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.b4eb097d35f44ed943676fd56f6bdc51.ttf (390KB)
@@ -11,7 +11,7 @@ node_modules/@react-navigation/elements/lib/module/assets/close-icon.808e1b1b9b5
 node_modules/@react-navigation/elements/lib/module/assets/search-icon.286d67d3f74808a60a78d3ebf1a5fb57.png (928B)
 
 › web bundles (1):
-_expo/static/js/web/index-ae0b76ee3457f6aa8a4d772b8ee91775.js (1.7MB)
+_expo/static/js/web/index-acfeba17c10f6d8835a4f651e02076cb.js (1.8MB)
 
 › Files (2):
 index.html (1.2KB)

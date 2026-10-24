@@ -1,0 +1,34 @@
+{
+  "projectId": "arbeit-2e04e",
+  "collection": "tasks",
+  "records": [
+    {
+      "id": "sample-lab07",
+      "dateAdded": {
+        "type": "Firestore Timestamp",
+        "iso": "2026-10-24T09:00:00.000Z"
+      },
+      "dueDate": {
+        "type": "Firestore Timestamp",
+        "iso": "2026-10-26T14:00:00.000Z"
+      },
+      "name": "Finish mobile app lab",
+      "assignedTo": "Dion",
+      "completed": false
+    },
+    {
+      "id": "sample-reading",
+      "completed": true,
+      "dueDate": {
+        "type": "Firestore Timestamp",
+        "iso": "2026-10-25T14:00:00.000Z"
+      },
+      "assignedTo": "Dion",
+      "dateAdded": {
+        "type": "Firestore Timestamp",
+        "iso": "2026-10-24T09:00:00.000Z"
+      },
+      "name": "Read Firestore documentation"
+    }
+  ]
+}

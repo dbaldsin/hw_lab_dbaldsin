@@ -1,0 +1,2 @@
+Command: npx expo lint
+Result: PASS (exit code 0; no errors or warnings)

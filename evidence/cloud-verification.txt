@@ -1,0 +1,5 @@
+Two sample task documents are present with Firestore Timestamp fields.
+PASS create/read + timestamp round trip
+PASS edit + completion
+PASS real-time snapshot listener
+PASS delete

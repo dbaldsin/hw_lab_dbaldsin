@@ -1,0 +1,2 @@
+Command: npx tsc --noEmit
+Result: PASS (exit code 0; no diagnostics)

@@ -1,0 +1,23 @@
+Starting Metro Bundler
+
+Android Bundled 20862ms index.ts (926 modules)
+iOS Bundled 25681ms index.ts (935 modules)
+
+› Assets (25):
+node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/Ionicons.ttf (390KB)
+node_modules/@react-navigation/elements/lib/module/assets/back-icon-mask.png (653B)
+node_modules/@react-navigation/elements/lib/module/assets/back-icon.png (8 variations | 359B)
+node_modules/@react-navigation/elements/lib/module/assets/clear-icon.png (4 variations | 425B)
+node_modules/@react-navigation/elements/lib/module/assets/close-icon.png (4 variations | 235B)
+node_modules/@react-navigation/elements/lib/module/assets/search-icon.png (7 variations | 592B)
+
+› android bundles (1):
+_expo/static/js/android/index-8f8a5ec2471ab62a3395e20279b0a285.hbc (3.6MB)
+
+› ios bundles (1):
+_expo/static/js/ios/index-4d1388bb3899547a5447b929e966d808.hbc (3.6MB)
+
+› Files (1):
+metadata.json (2.4KB)
+
+Exported: /tmp/lab07-native-export

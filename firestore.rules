@@ -1,7 +1,7 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    // Lab-only test access expires on November 23, 2026. Do not use for private data.
+    // Disposable Lab 07 tasks only; temporary test access.
     match /tasks/{taskId} {
       allow read, write: if request.time < timestamp.date(2026, 11, 23);
     }

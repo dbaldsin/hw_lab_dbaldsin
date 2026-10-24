@@ -1,0 +1,10 @@
+Lab 07: Arbeit
+Student: Dion Baldsing (dbaldsin)
+Platform: React Native (Expo / TypeScript)
+Repository: https://github.com/dbaldsin/hw_lab_dbaldsin
+Required branch: hw_lab7_Arbeit
+Branch link: https://github.com/dbaldsin/hw_lab_dbaldsin/tree/hw_lab7_Arbeit
+
+Upload the submission PDF with screenshots to Canvas. A source ZIP is included as a convenience; the GitHub link and required branch are included above and in the PDF.
+
+CA sharing: dbaldsin is the repository owner. Share the repository with your assigned CA using the CA's own GitHub username.

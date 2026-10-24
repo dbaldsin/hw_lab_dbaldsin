@@ -1,6 +1,6 @@
 """Build a compact submission PDF from real screenshots and recorded test output."""
 from pathlib import Path
-import fitz
+import pymupdf as fitz
 
 ROOT = Path(__file__).resolve().parent.parent
 OUTPUT = ROOT.parent / 'Submission'
@@ -14,12 +14,16 @@ def add_text_page(document, heading, paragraphs):
     page.insert_text((44, 58), heading, fontsize=20, color=(0.05, 0.25, 0.5))
     y = 94
     for paragraph in paragraphs:
-        remaining = page.insert_textbox(fitz.Rect(44, y, 568, y + 140), paragraph, fontsize=11, lineheight=1.45)
+        # Estimate wrapping conservatively to keep prose and test logs on the page.
+        lines = sum(max(1, (len(line) + 74) // 75) for line in paragraph.splitlines())
+        height = lines * 17 + 12
+        if y + height > 750:
+            page = document.new_page(width=612, height=792)
+            y = 54
+        remaining = page.insert_textbox(fitz.Rect(44, y, 568, y + height), paragraph, fontsize=11, lineheight=1.45)
         if remaining < 0:
             raise ValueError('Submission paragraph does not fit.')
-        # Count wrapped lines conservatively, then retain paragraph spacing.
-        lines = sum(max(1, (len(line) + 84) // 85) for line in paragraph.splitlines())
-        y += lines * 17 + 20
+        y += height + 12
     return page
 
 
@@ -40,10 +44,11 @@ def build():
         page.insert_text((44, 44), title, fontsize=16, color=(0.05, 0.25, 0.5))
         page.insert_image(fitz.Rect(44, 65, 568, 745), filename=str(image), keep_proportion=True)
         page.insert_text((44, 770), 'Lab 07 | React Native | dbaldsin', fontsize=9, color=(0.4, 0.4, 0.4))
-    text = (ROOT / 'evidence/model-tests.txt').read_text()
-    add_text_page(document, 'Recorded verification results', [
-        (ROOT / 'VERIFICATION.md').read_text().replace('# Verification record', '').strip(),
-        'Actual Jest output:\n' + text.strip(),
+    record = (ROOT / 'VERIFICATION.md').read_text().replace('# Verification record', '').replace('**', '').replace('`', '').strip()
+    add_text_page(document, 'Recorded verification results', record.split('\n\n'))
+    add_text_page(document, 'Actual test output', [
+        (ROOT / 'evidence/model-tests.txt').read_text().strip(),
+        (ROOT / 'evidence/cloud-verification.txt').read_text().strip(),
     ])
     destination = OUTPUT / 'Lab07_dbaldsin_ReactNative.pdf'
     document.save(destination, garbage=4, deflate=True)

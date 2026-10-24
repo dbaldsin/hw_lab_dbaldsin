@@ -19,13 +19,18 @@ export function makeDateChangeHandler(setShowPicker: (show: boolean) => void, on
   };
 }
 /** Validate both fields, await persistence, and navigate only after a successful write. */
-export async function saveWithValidation(name: string, assignedTo: string, save: () => Promise<void>, onDone: () => void) {
+export async function saveWithValidation(name: string, assignedTo: string, save: () => Promise<void>, onDone: () => void, onError?: (message: string) => void) {
+  /** Display recoverable feedback without blocking the web interface. */
+  function fail(title: string, message: string) {
+    onError?.(message);
+    if (Platform.OS !== 'web' || !onError) showMessage(title, message);
+  }
   if (!isValidTask(name, assignedTo)) {
-    showMessage('Validation Error', 'Please fill in both name and assignee.');
+    fail('Validation Error', 'Please fill in both name and assignee.');
     return;
   }
   try { await save(); onDone(); }
-  catch { showMessage('Error', 'Failed to save task. Check your connection and Firestore rules.'); }
+  catch { fail('Error', 'Failed to save task. Check your connection and Firestore rules.'); }
 }
 /** Ask before deletion and leave the screen open if persistence fails. */
 export function confirmDelete(performDelete: () => Promise<void>, onDone: () => void) {

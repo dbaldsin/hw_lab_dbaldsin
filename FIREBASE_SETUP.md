@@ -12,7 +12,7 @@ To connect a different Firebase project:
 6. Run `npm start`. Restart Metro after changing `.env` values.
 7. For a live check, run `node scripts/seed.mjs --verify`.
 
-`firestore.rules` contains a lab-only test rule restricted to the `tasks` collection and expiring November 23, 2026. Rules are not applied automatically by the app. Check the actual console rules if reads or writes fail later.
+`firestore.rules` contains a lab-only test rule restricted to the `tasks` collection and expiring November 23, 2026. These rules were published to the included lab project. The app does not deploy rules automatically. Check the actual console rules if reads or writes fail later.
 
 A local Firestore emulator is supported explicitly through `EXPO_PUBLIC_USE_FIRESTORE_EMULATOR=true` and port 8088. It is not a replacement for the lab's required cloud setup. Keep that setting false for submission.
 
