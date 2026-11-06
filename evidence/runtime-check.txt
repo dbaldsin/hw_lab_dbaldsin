@@ -1,0 +1,5 @@
+Expo Go 58.0.4 — iPhone 17 Pro simulator — iOS 26.3
+Metro: iOS Bundled 22056ms index.ts (802 modules)
+Temporary single-inference runtime probe:
+LOG  LAB09_RUNTIME_CHECK {"backend":"rn-webgl","predictions":3,"finite":true}
+Probe removed from final application. Synthetic input only; no real camera validation claimed.
